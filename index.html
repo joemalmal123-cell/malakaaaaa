@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OurWorld</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">OurWorld</a>
+    <nav><a href="#games">Discover</a><a href="#create">Create</a></nav>
+    <button id="loginButton" class="small-button">Sign in</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR WORLD. YOUR RULES.</p>
+      <h1>Play. Create.<br><span>Share your world.</span></h1>
+      <p class="intro">A place to build games, make an avatar, and explore worlds made by players.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#games">Explore games</a>
+        <a class="secondary-button" href="#create">Start creating</a>
+      </div>
+    </section>
+
+    <section id="games" class="section">
+      <div class="section-heading"><div><p class="eyebrow">JUMP IN</p><h2>Featured worlds</h2></div></div>
+      <div class="world-grid">
+        <button class="world-card" data-world="Obby World"><div class="world-art obby">OBBY</div><strong>Obby World</strong><span>Jump through the course</span></button>
+        <button class="world-card" data-world="Block Builder"><div class="world-art builder">BUILD</div><strong>Block Builder</strong><span>Make something awesome</span></button>
+        <button class="world-card" data-world="Chill Plaza"><div class="world-art plaza">PLAZA</div><strong>Chill Plaza</strong><span>Hang out and explore</span></button>
+      </div>
+      <p id="worldMessage" class="message" aria-live="polite">Choose a world to preview it.</p>
+    </section>
+
+    <section id="create" class="section creator-section">
+      <div><p class="eyebrow">MAKE IT YOURS</p><h2>Avatar creator</h2><p>Choose a color for your starter avatar. More customization is coming.</p></div>
+      <div class="creator-panel">
+        <div class="avatar-stage"><div id="avatar" class="avatar"><div class="avatar-head"></div><div class="avatar-body"></div><div class="avatar-legs"><i></i><i></i></div></div></div>
+        <div class="color-options"><strong>Avatar color</strong><div class="swatches"><button aria-label="Blue" data-color="#5688f5" class="swatch selected" style="--swatch:#5688f5"></button><button aria-label="Red" data-color="#ef6666" class="swatch" style="--swatch:#ef6666"></button><button aria-label="Green" data-color="#55bd88" class="swatch" style="--swatch:#55bd88"></button><button aria-label="Purple" data-color="#a47be8" class="swatch" style="--swatch:#a47be8"></button><button aria-label="Yellow" data-color="#e9bd4f" class="swatch" style="--swatch:#e9bd4f"></button></div><p id="avatarMessage" class="message">Your avatar is ready.</p></div>
+      </div>
+    </section>
+
+    <section class="section build-section">
+      <div><p class="eyebrow">FIRST BUILD</p><h2>Build a tiny world</h2><p>Click the buttons to place blocks on your first map. This is our first simple editor prototype.</p></div>
+      <div class="builder-panel"><div id="buildArea" class="build-area"><div class="ground"></div></div><div class="build-controls"><button id="addBlock" class="primary-button">Add block</button><button id="clearBlocks" class="secondary-button">Clear map</button><span id="blockCount">0 blocks</span></div></div>
+    </section>
+  </main>
+  <footer>OurWorld <span>Made by players, for players.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
